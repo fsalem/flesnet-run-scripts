@@ -1,8 +1,5 @@
 # The global timeslice size in number of MCs.
-#timeslice-size = 100
-
-# The size of the overlap region in number of MCs.
-overlap-size = 2
+#timeslice-size = 1000
 
 # The global maximum timeslice number.
 max-timeslice-number = 500000
@@ -14,17 +11,10 @@ processor-executable = ./tsclient -c%i -s%s -a
 processor-instances = 2
 
 
-standalone=false
-
 # input node buffer size
-#in-data-buffer-size-exp = 27
+#in-data-buffer-size-exp = 35
 # compute node buffer size 
-#cn-data-buffer-size-exp = 27
+#cn-data-buffer-size-exp = 30
 
-use-libfabric=true
-
-drop-process-ts=true
-#init-wait-time=500
-#min-recv-ts-to-process=0
-
+transport=libfabric
 #typical-content-size=4096
